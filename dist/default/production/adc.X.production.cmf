@@ -11,12 +11,18 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXVIFSui.obj
+$/tmp/xcXMedjs8.obj
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 $dist/default/production/adc.X.production.obj
 cinit CODE 0 7FC 7FC 4 2
-maintext CODE 0 77E 77E 7E 2
+text1 CODE 0 75A 75A 7 2
+text2 CODE 0 7B5 7B5 47 2
+text3 CODE 0 753 753 7 2
+text4 CODE 0 76C 76C C 2
+text5 CODE 0 761 761 B 2
+text6 CODE 0 778 778 10 2
+maintext CODE 0 788 788 2D 2
 cstackCOMMON COMMON 1 70 70 5 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -32,13 +38,13 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-77D 2
+CONST 3-752 2
 CONST 800-1FFF 2
-ENTRY 3-77D 2
+ENTRY 3-752 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-77D 2
+CODE 3-752 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -47,9 +53,9 @@ SFR3 180-18F 1
 COMMON 75-7D 1
 CONFIG 2008-2008 2
 EEDATA 2100-21FF 2
-STRCODE 3-77D 2
+STRCODE 3-752 2
 STRCODE 800-1FFF 2
-STRING 3-77D 2
+STRING 3-752 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -65,53 +71,71 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/adc.X.production.obj
-7FC cinit CODE >229:/tmp/xcXzwS76D
-7FC cinit CODE >232:/tmp/xcXzwS76D
-7FC cinit CODE >238:/tmp/xcXzwS76D
-7FC cinit CODE >240:/tmp/xcXzwS76D
-7FD cinit CODE >241:/tmp/xcXzwS76D
-77E maintext CODE >8:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-77E maintext CODE >11:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-781 maintext CODE >12:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-783 maintext CODE >13:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-786 maintext CODE >16:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-789 maintext CODE >17:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-78A maintext CODE >18:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-78B maintext CODE >19:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-78C maintext CODE >21:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-78D maintext CODE >22:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-790 maintext CODE >23:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-791 maintext CODE >24:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-794 maintext CODE >25:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-797 maintext CODE >26:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-798 maintext CODE >27:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-79B maintext CODE >28:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-79C maintext CODE >29:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-79F maintext CODE >30:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7A0 maintext CODE >31:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7A3 maintext CODE >32:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7A4 maintext CODE >33:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7A7 maintext CODE >34:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7A9 maintext CODE >35:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7AB maintext CODE >37:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7AB maintext CODE >38:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7AD maintext CODE >39:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B0 maintext CODE >43:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B1 maintext CODE >44:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B2 maintext CODE >45:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B4 maintext CODE >46:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B5 maintext CODE >47:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7B7 maintext CODE >49:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7BB maintext CODE >50:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7C1 maintext CODE >52:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7C6 maintext CODE >53:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7D3 maintext CODE >55:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7DF maintext CODE >56:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7E4 maintext CODE >58:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7F0 maintext CODE >59:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7F5 maintext CODE >61:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7F9 maintext CODE >62:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
-7FB maintext CODE >36:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7FC cinit CODE >235:/tmp/xcXMbue3v
+7FC cinit CODE >238:/tmp/xcXMbue3v
+7FC cinit CODE >244:/tmp/xcXMbue3v
+7FC cinit CODE >246:/tmp/xcXMbue3v
+7FD cinit CODE >247:/tmp/xcXMbue3v
+778 text6 CODE >17:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+778 text6 CODE >18:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+77B text6 CODE >19:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+77C text6 CODE >20:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+77D text6 CODE >21:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+780 text6 CODE >22:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+783 text6 CODE >23:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+784 text6 CODE >24:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+787 text6 CODE >25:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+761 text5 CODE >8:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+761 text5 CODE >9:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+764 text5 CODE >10:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+765 text5 CODE >11:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+766 text5 CODE >12:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+767 text5 CODE >13:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+768 text5 CODE >14:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+76B text5 CODE >15:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+76C text4 CODE >27:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+76C text4 CODE >28:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+76F text4 CODE >29:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+770 text4 CODE >30:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+773 text4 CODE >31:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+774 text4 CODE >32:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+777 text4 CODE >33:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+753 text3 CODE >42:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+753 text3 CODE >43:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+756 text3 CODE >44:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+756 text3 CODE >45:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+758 text3 CODE >46:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+759 text3 CODE >47:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7B5 text2 CODE >49:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7B5 text2 CODE >51:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7BB text2 CODE >52:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7C1 text2 CODE >54:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7C6 text2 CODE >55:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7D3 text2 CODE >57:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7DF text2 CODE >58:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7E4 text2 CODE >60:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7F0 text2 CODE >61:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7F5 text2 CODE >63:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7F9 text2 CODE >64:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7FB text2 CODE >65:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+75A text1 CODE >35:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+75A text1 CODE >36:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+75A text1 CODE >37:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+75C text1 CODE >38:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+75F text1 CODE >39:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+760 text1 CODE >40:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+788 maintext CODE >67:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+788 maintext CODE >68:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+78B maintext CODE >69:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+78D maintext CODE >71:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+792 maintext CODE >72:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+797 maintext CODE >73:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+79C maintext CODE >75:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7A0 maintext CODE >78:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7A5 maintext CODE >79:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7AA maintext CODE >80:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7AF maintext CODE >81:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
+7B4 maintext CODE >77:/home/oscar/MPLABXProjects/ins/adc.X/adc_main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -130,34 +154,44 @@ __Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/adc.X.production.obj
+_waitTimer EB4 0 CODE 0 text1 dist/default/production/adc.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _TMR0 1 0 ABS 0 - dist/default/production/adc.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXVIFSui.obj
-_main EFC 0 CODE 0 maintext dist/default/production/adc.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXMedjs8.obj
+_main F10 0 CODE 0 maintext dist/default/production/adc.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/adc.X.production.obj
-start 0 0 CODE 0 init /tmp/xcXVIFSui.obj
+start 0 0 CODE 0 init /tmp/xcXMedjs8.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production/adc.X.production.obj
+__size_of_configUART 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXVIFSui.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXMedjs8.obj
+__size_of_sendADC 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 _OSCCONbits 8F 0 ABS 0 - dist/default/production/adc.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+__end_of_configADC F10 0 CODE 0 text6 dist/default/production/adc.X.production.obj
+__size_of_configADC 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 _ADRESH 1E 0 ABS 0 - dist/default/production/adc.X.production.obj
 _ADRESL 9E 0 ABS 0 - dist/default/production/adc.X.production.obj
 _ANSELH 189 0 ABS 0 - dist/default/production/adc.X.production.obj
-main@aux 72 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
+sendADC@parteA 74 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
+sendADC@parteB 73 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
+__size_of_configTimer 0 0 ABS 0 - dist/default/production/adc.X.production.obj
+_configADC EF0 0 CODE 0 text6 dist/default/production/adc.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 start_initialization FF8 0 CODE 0 cinit dist/default/production/adc.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXVIFSui.obj
+__end_of_sendADC FF8 0 CODE 0 text2 dist/default/production/adc.X.production.obj
+__end_of_runADC EB4 0 CODE 0 text3 dist/default/production/adc.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXMedjs8.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -199,14 +233,18 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXVIFSui.obj
+_configTimer EC2 0 CODE 0 text5 dist/default/production/adc.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXMedjs8.obj
 _RCSTAbits 18 0 ABS 0 - dist/default/production/adc.X.production.obj
-__pmaintext EFC 0 CODE 0 maintext dist/default/production/adc.X.production.obj
+__pmaintext F10 0 CODE 0 maintext dist/default/production/adc.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/adc.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcXVIFSui.obj
-stacklo 0 0 ABS 0 - /tmp/xcXVIFSui.obj
+_runADC EA6 0 CODE 0 text3 dist/default/production/adc.X.production.obj
+_configUART ED8 0 CODE 0 text4 dist/default/production/adc.X.production.obj
+stackhi 0 0 ABS 0 - /tmp/xcXMedjs8.obj
+stacklo 0 0 ABS 0 - /tmp/xcXMedjs8.obj
+_sendADC F6A 0 CODE 0 text2 dist/default/production/adc.X.production.obj
 _ADCON0bits 1F 0 ABS 0 - dist/default/production/adc.X.production.obj
 _ADCON1bits 9F 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
@@ -220,18 +258,24 @@ end_of_initialization FF8 0 CODE 0 cinit dist/default/production/adc.X.productio
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
+__size_of_runADC 0 0 ABS 0 - dist/default/production/adc.X.production.obj
+__ptext1 EB4 0 CODE 0 text1 dist/default/production/adc.X.production.obj
+__ptext2 F6A 0 CODE 0 text2 dist/default/production/adc.X.production.obj
+__ptext3 EA6 0 CODE 0 text3 dist/default/production/adc.X.production.obj
+__ptext4 ED8 0 CODE 0 text4 dist/default/production/adc.X.production.obj
+__ptext5 EC2 0 CODE 0 text5 dist/default/production/adc.X.production.obj
+__ptext6 EF0 0 CODE 0 text6 dist/default/production/adc.X.production.obj
+__end_of_configUART EF0 0 CODE 0 text4 dist/default/production/adc.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-main@parteA 74 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
-main@parteB 73 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production/adc.X.production.obj
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
 _TXSTAbits 98 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main FF8 0 CODE 0 maintext dist/default/production/adc.X.production.obj
+__end_of_main F6A 0 CODE 0 maintext dist/default/production/adc.X.production.obj
 _ANSEL 188 0 ABS 0 - dist/default/production/adc.X.production.obj
 _PORTD 8 0 ABS 0 - dist/default/production/adc.X.production.obj
 _TRISB 86 0 ABS 0 - dist/default/production/adc.X.production.obj
@@ -239,7 +283,11 @@ _TRISD 88 0 ABS 0 - dist/default/production/adc.X.production.obj
 _TXREG 19 0 ABS 0 - dist/default/production/adc.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+sendADC@aux 72 0 COMMON 1 cstackCOMMON dist/default/production/adc.X.production.obj
 __initialization FF8 0 CODE 0 cinit dist/default/production/adc.X.production.obj
+__end_of_configTimer ED8 0 CODE 0 text5 dist/default/production/adc.X.production.obj
+__end_of_waitTimer EC2 0 CODE 0 text1 dist/default/production/adc.X.production.obj
+__size_of_waitTimer 0 0 ABS 0 - dist/default/production/adc.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -266,7 +314,13 @@ __initialization FF8 0 CODE 0 cinit dist/default/production/adc.X.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-maintext 0 77E EFC 7E 2
+text1 0 75A EB4 7 2
+text2 0 7B5 F6A 47 2
+text3 0 753 EA6 7 2
+text4 0 76C ED8 C 2
+text5 0 761 EC2 B 2
+text6 0 778 EF0 10 2
+maintext 0 788 F10 2D 2
 cstackCOMMON 1 70 70 5 1
 reset_vec 0 0 0 3 2
 config 0 2007 400E 1 2

@@ -1,27 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"1600 /opt/microchip/xc8/v1.45/include/pic16f887.h
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"1476
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"1249
-[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
-[n S45 . ADON GO_nDONE CHS ADCS ]
-"1255
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
-"1265
-[s S47 :1 `uc 1 :1 `uc 1 ]
-[n S47 . . nDONE ]
-"1269
-[s S48 :1 `uc 1 :1 `uc 1 ]
-[n S48 . . GO_DONE ]
-"1248
-[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
-[n S44 . . . . . ]
-"1274
-[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
-"1866
+"1866 /opt/microchip/xc8/v1.45/include/pic16f887.h
 [s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S70 . SCS LTS HTS OSTS IRCF ]
 "1873
@@ -43,6 +21,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S49 . . . ]
 "1364
 [v _OPTION_REGbits `VS49 ~T0 @X0 0 e@129 ]
+"463
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"473
+[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S17 . . TMR0IF . TMR0IE ]
+"462
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"480
+[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"57
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"1249
+[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S45 . ADON GO_nDONE CHS ADCS ]
+"1255
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1265
+[s S47 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . nDONE ]
+"1269
+[s S48 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO_DONE ]
+"1248
+[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
+[n S44 . . . . . ]
+"1274
+[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
 "2981
 [s S116 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S116 . . VCFG0 VCFG1 . ADFM ]
@@ -51,6 +59,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S115 . . ]
 "2989
 [v _ADCON1bits `VS115 ~T0 @X0 0 e@159 ]
+"3385
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3447
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"2968
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 "1042
 [s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S37 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
@@ -82,23 +96,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S98 . . . . ]
 "2580
 [v _TXSTAbits `VS98 ~T0 @X0 0 e@152 ]
-"3385
-[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
-"3447
-[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"2968
-[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"463
-[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
-"473
-[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S17 . . TMR0IF . TMR0IE ]
-"462
-[u S15 `S16 1 `S17 1 ]
-[n S15 . . . ]
-"480
-[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 "541
 [s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
@@ -107,14 +104,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S18 . . ]
 "551
 [v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
-"350
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"57
-[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
 "1236
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
 "1131
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+[p mainexit ]
+"1600
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1476
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"350
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1607,162 +1607,236 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x IESO=OFF ]
 "6
 [p x FCMEN=OFF ]
-[v $root$_main `(v ~T0 @X0 0 e ]
 "8
-[v _main `(v ~T0 @X0 1 ef ]
+[v _configTimer `(v ~T0 @X0 1 ef ]
 {
-[; ;adc_main.c: 8: void main(void) {
-[e :U _main ]
+[; ;adc_main.c: 8: void configTimer(void) {
+[e :U _configTimer ]
 [f ]
+[; ;adc_main.c: 9: OSCCONbits.IRCF2 = 0;
 "9
+[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
+[; ;adc_main.c: 10: OPTION_REGbits.PS1 = 0;
+"10
+[e = . . _OPTION_REGbits 1 1 -> -> 0 `i `uc ]
+[; ;adc_main.c: 11: OPTION_REGbits.PSA = 0;
+"11
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+[; ;adc_main.c: 12: OPTION_REGbits.T0CS = 0;
+"12
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+[; ;adc_main.c: 13: INTCONbits.T0IF = 0;
+"13
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;adc_main.c: 14: TMR0 = 0;
+"14
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;adc_main.c: 15: }
+"15
+[e :UE 138 ]
+}
+"17
+[v _configADC `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 17: void configADC(void) {
+[e :U _configADC ]
+[f ]
+[; ;adc_main.c: 18: ADCON0bits.ADON = 1;
+"18
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+[; ;adc_main.c: 19: ADCON0bits.CHS3 = 1;
+"19
+[e = . . _ADCON0bits 1 5 -> -> 1 `i `uc ]
+[; ;adc_main.c: 20: ADCON0bits.ADCS1 = 0;
+"20
+[e = . . _ADCON0bits 1 7 -> -> 0 `i `uc ]
+[; ;adc_main.c: 21: ADCON1bits.ADFM = 0;
+"21
+[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
+[; ;adc_main.c: 22: ANSEL= 0;
+"22
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;adc_main.c: 23: ANSELH = 0;
+"23
+[e = _ANSELH -> -> 0 `i `uc ]
+[; ;adc_main.c: 24: ADRESL = 0;
+"24
+[e = _ADRESL -> -> 0 `i `uc ]
+[; ;adc_main.c: 25: }
+"25
+[e :UE 139 ]
+}
+"27
+[v _configUART `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 27: void configUART(void) {
+[e :U _configUART ]
+[f ]
+[; ;adc_main.c: 28: RCSTAbits.SPEN = 1;
+"28
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;adc_main.c: 29: RCSTAbits.CREN = 1;
+"29
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;adc_main.c: 30: TXSTAbits.BRGH = 1;
+"30
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;adc_main.c: 31: TXSTAbits.TXEN = 1;
+"31
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;adc_main.c: 32: PIR1bits.ADIF=0;
+"32
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;adc_main.c: 33: }
+"33
+[e :UE 140 ]
+}
+"35
+[v _waitTimer `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 35: void waitTimer(void) {
+[e :U _waitTimer ]
+[f ]
+[; ;adc_main.c: 36: while(INTCONbits.T0IF != 1)
+"36
+[e $U 142  ]
+[e :U 143 ]
+[; ;adc_main.c: 37: ;
+"37
+[e :U 142 ]
+"36
+[e $ != -> . . _INTCONbits 0 2 `i -> 1 `i 143  ]
+[e :U 144 ]
+[; ;adc_main.c: 38: TMR0 = 0;
+"38
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;adc_main.c: 39: INTCONbits.T0IF = 0;
+"39
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;adc_main.c: 40: }
+"40
+[e :UE 141 ]
+}
+"42
+[v _runADC `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 42: void runADC(void) {
+[e :U _runADC ]
+[f ]
+[; ;adc_main.c: 43: ADCON0bits.GO = 1;
+"43
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+[; ;adc_main.c: 44: while(PIR1bits.ADIF != 1)
+"44
+[e $U 146  ]
+[e :U 147 ]
+[; ;adc_main.c: 45: ;
+"45
+[e :U 146 ]
+"44
+[e $ != -> . . _PIR1bits 0 6 `i -> 1 `i 147  ]
+[e :U 148 ]
+[; ;adc_main.c: 46: PIR1bits.ADIF = 0;
+"46
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;adc_main.c: 47: }
+"47
+[e :UE 145 ]
+}
+"49
+[v _sendADC `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 49: void sendADC(void) {
+[e :U _sendADC ]
+[f ]
+"50
 [v _parteB `uc ~T0 @X0 1 a ]
 [v _parteA `uc ~T0 @X0 1 a ]
 [v _aux `uc ~T0 @X0 1 a ]
-[; ;adc_main.c: 9: unsigned char parteB, parteA, aux;
-[; ;adc_main.c: 11: TRISD=0X00;
-"11
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;adc_main.c: 12: TRISB=0XFF;
-"12
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;adc_main.c: 13: ADCON0bits.ADON=1;
-"13
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-[; ;adc_main.c: 16: OSCCONbits.IRCF2 = 0;
-"16
-[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
-[; ;adc_main.c: 17: OPTION_REGbits.PS1 = 0;
-"17
-[e = . . _OPTION_REGbits 1 1 -> -> 0 `i `uc ]
-[; ;adc_main.c: 18: OPTION_REGbits.PSA = 0;
-"18
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-[; ;adc_main.c: 19: OPTION_REGbits.T0CS = 0;
-"19
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-[; ;adc_main.c: 21: OPTION_REGbits.T0CS=0;
-"21
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-[; ;adc_main.c: 22: ADCON0bits.CHS3=1;
-"22
-[e = . . _ADCON0bits 1 5 -> -> 1 `i `uc ]
-[; ;adc_main.c: 23: ADCON0bits.ADCS1=0;
-"23
-[e = . . _ADCON0bits 1 7 -> -> 0 `i `uc ]
-[; ;adc_main.c: 24: ADCON1bits.ADFM=0;
-"24
-[e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
-[; ;adc_main.c: 25: RCSTAbits.SPEN = 1;
-"25
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;adc_main.c: 26: RCSTAbits.CREN = 1;
-"26
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-[; ;adc_main.c: 27: TXSTAbits.BRGH = 1;
-"27
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-[; ;adc_main.c: 28: TXSTAbits.TXEN = 1;
-"28
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;adc_main.c: 29: ANSEL=0;
-"29
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;adc_main.c: 30: ANSELH=0;
-"30
-[e = _ANSELH -> -> 0 `i `uc ]
-[; ;adc_main.c: 31: ADRESL=0;
-"31
-[e = _ADRESL -> -> 0 `i `uc ]
-[; ;adc_main.c: 32: INTCONbits.T0IF=0;
-"32
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;adc_main.c: 33: PIR1bits.ADIF=0;
-"33
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc_main.c: 34: PORTD=0x0F;
-"34
-[e = _PORTD -> -> 15 `i `uc ]
-[; ;adc_main.c: 35: TMR0=254;
-"35
-[e = _TMR0 -> -> 254 `i `uc ]
-[; ;adc_main.c: 36: while(1){
-"36
-[e :U 140 ]
-{
-[; ;adc_main.c: 37: while(INTCONbits.T0IF != 1)
-"37
-[e $U 142  ]
-[e :U 143 ]
-[; ;adc_main.c: 38: ;
-"38
-[e :U 142 ]
-"37
-[e $ != -> . . _INTCONbits 0 2 `i -> 1 `i 143  ]
-[e :U 144 ]
-[; ;adc_main.c: 39: TMR0 = 0;
-"39
-[e = _TMR0 -> -> 0 `i `uc ]
-[; ;adc_main.c: 43: INTCONbits.T0IF=0;
-"43
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;adc_main.c: 44: ADCON0bits.GO=1;
-"44
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;adc_main.c: 45: while(PIR1bits.ADIF!=1);
-"45
-[e $U 145  ]
-[e :U 146 ]
-[e :U 145 ]
-[e $ != -> . . _PIR1bits 0 6 `i -> 1 `i 146  ]
-[e :U 147 ]
-[; ;adc_main.c: 46: PIR1bits.ADIF=0;
-"46
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc_main.c: 47: while(PIR1bits.TXIF != 1);
-"47
-[e $U 148  ]
-[e :U 149 ]
-[e :U 148 ]
-[e $ != -> . . _PIR1bits 0 4 `i -> 1 `i 149  ]
-[e :U 150 ]
-[; ;adc_main.c: 49: parteA = ADRESH;
-"49
+[; ;adc_main.c: 50: unsigned char parteB, parteA, aux;
+[; ;adc_main.c: 51: parteA = ADRESH;
+"51
 [e = _parteA _ADRESH ]
-[; ;adc_main.c: 50: parteB = ADRESL;
-"50
-[e = _parteB _ADRESL ]
-[; ;adc_main.c: 52: aux = parteA & 0x07;
+[; ;adc_main.c: 52: parteB = ADRESL;
 "52
+[e = _parteB _ADRESL ]
+[; ;adc_main.c: 54: aux = parteA & 0x07;
+"54
 [e = _aux -> & -> _parteA `i -> 7 `i `uc ]
-[; ;adc_main.c: 53: aux = aux << 2;
-"53
-[e = _aux -> << -> _aux `i -> 2 `i `uc ]
-[; ;adc_main.c: 55: parteA = parteA >> 3;
+[; ;adc_main.c: 55: aux = aux << 2;
 "55
+[e = _aux -> << -> _aux `i -> 2 `i `uc ]
+[; ;adc_main.c: 57: parteA = parteA >> 3;
+"57
 [e = _parteA -> >> -> _parteA `i -> 3 `i `uc ]
-[; ;adc_main.c: 56: parteA = parteA | 0x80;
-"56
-[e = _parteA -> | -> _parteA `i -> 128 `i `uc ]
-[; ;adc_main.c: 58: parteB = parteB >> 6;
+[; ;adc_main.c: 58: parteA = parteA | 0x80;
 "58
+[e = _parteA -> | -> _parteA `i -> 128 `i `uc ]
+[; ;adc_main.c: 60: parteB = parteB >> 6;
+"60
 [e = _parteB -> >> -> _parteB `i -> 6 `i `uc ]
-[; ;adc_main.c: 59: parteB = parteB | aux;
-"59
-[e = _parteB -> | -> _parteB `i -> _aux `i `uc ]
-[; ;adc_main.c: 61: TXREG = parteB;
+[; ;adc_main.c: 61: parteB = parteB | aux;
 "61
+[e = _parteB -> | -> _parteB `i -> _aux `i `uc ]
+[; ;adc_main.c: 63: TXREG = parteB;
+"63
 [e = _TXREG _parteB ]
-[; ;adc_main.c: 62: TXREG = parteA;
-"62
+[; ;adc_main.c: 64: TXREG = parteA;
+"64
 [e = _TXREG _parteA ]
-"66
+[; ;adc_main.c: 65: }
+"65
+[e :UE 149 ]
 }
-[e :U 139 ]
-"36
-[e $U 140  ]
-[e :U 141 ]
-[; ;adc_main.c: 66: }
-[; ;adc_main.c: 67: }
+[v $root$_main `(v ~T0 @X0 0 e ]
 "67
-[e :UE 138 ]
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;adc_main.c: 67: void main(void) {
+[e :U _main ]
+[f ]
+[; ;adc_main.c: 68: TRISD=0X00;
+"68
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;adc_main.c: 69: TRISB=0XFF;
+"69
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;adc_main.c: 71: configTimer();
+"71
+[e ( _configTimer ..  ]
+[; ;adc_main.c: 72: configADC();
+"72
+[e ( _configADC ..  ]
+[; ;adc_main.c: 73: configUART();
+"73
+[e ( _configUART ..  ]
+[; ;adc_main.c: 75: PORTD=0x0F;
+"75
+[e = _PORTD -> -> 15 `i `uc ]
+[; ;adc_main.c: 77: while(1) {
+"77
+[e :U 152 ]
+{
+[; ;adc_main.c: 78: waitTimer();
+"78
+[e ( _waitTimer ..  ]
+[; ;adc_main.c: 79: runADC();
+"79
+[e ( _runADC ..  ]
+[; ;adc_main.c: 80: waitTimer();
+"80
+[e ( _waitTimer ..  ]
+[; ;adc_main.c: 81: sendADC();
+"81
+[e ( _sendADC ..  ]
+"82
+}
+[e :U 151 ]
+"77
+[e $U 152  ]
+[e :U 153 ]
+[; ;adc_main.c: 82: }
+[; ;adc_main.c: 83: }
+"83
+[e :UE 150 ]
 }
