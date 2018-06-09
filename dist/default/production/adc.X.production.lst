@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.45 build -152302408 
-                                                                                               Sat Jun  9 19:57:57 2018
+                                                                                               Sat Jun  9 21:44:19 2018
 
 Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
      1                           	processor	16F887
@@ -232,7 +232,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    218 ;;
    219 ;; *************** function _main *****************
    220 ;; Defined at:
-   221 ;;		line 71 in file "adc_main.c"
+   221 ;;		line 72 in file "adc_main.c"
    222 ;; Parameters:    Size  Location     Type
    223 ;;		None
    224 ;; Auto vars:     Size  Location     Type
@@ -268,7 +268,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    254                           ;psect for function _main
    255  0788                     _main:	
    256                           
-   257                           ;adc_main.c: 72: TRISD=0X00;
+   257                           ;adc_main.c: 73: TRISD=0X00;
    258                           
    259                           ;incstack = 0
    260                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
@@ -276,47 +276,47 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    262  0789  1303               	bcf	3,6	;RP1=0, select bank1
    263  078A  0188               	clrf	8	;volatile
    264                           
-   265                           ;adc_main.c: 73: TRISB=0XFF;
+   265                           ;adc_main.c: 74: TRISB=0XFF;
    266  078B  30FF               	movlw	255
    267  078C  0086               	movwf	6	;volatile
    268                           
-   269                           ;adc_main.c: 75: configTimer();
-   270  078D  120A  118A  2760  120A  118A  	fcall	_configTimer
+   269                           ;adc_main.c: 76: configTimer();
+   270  078D  120A  118A  276B  120A  118A  	fcall	_configTimer
    271                           
-   272                           ;adc_main.c: 76: configADC();
+   272                           ;adc_main.c: 77: configADC();
    273  0792  120A  118A  2778  120A  118A  	fcall	_configADC
    274                           
-   275                           ;adc_main.c: 77: configUART();
-   276  0797  120A  118A  276C  120A  118A  	fcall	_configUART
+   275                           ;adc_main.c: 78: configUART();
+   276  0797  120A  118A  275F  120A  118A  	fcall	_configUART
    277                           
-   278                           ;adc_main.c: 79: PORTD=0x0F;
+   278                           ;adc_main.c: 80: PORTD=0x0F;
    279  079C  300F               	movlw	15
    280  079D  1283               	bcf	3,5	;RP0=0, select bank0
    281  079E  1303               	bcf	3,6	;RP1=0, select bank0
    282  079F  0088               	movwf	8	;volatile
    283  07A0                     l570:	
-   284                           ;adc_main.c: 81: while(1) {
+   284                           ;adc_main.c: 82: while(1) {
    285                           
    286                           
-   287                           ;adc_main.c: 82: waitTimer();
-   288  07A0  120A  118A  2758  120A  118A  	fcall	_waitTimer
+   287                           ;adc_main.c: 83: waitTimer();
+   288  07A0  120A  118A  2757  120A  118A  	fcall	_waitTimer
    289                           
-   290                           ;adc_main.c: 83: runADC();
-   291  07A5  120A  118A  2751  120A  118A  	fcall	_runADC
+   290                           ;adc_main.c: 84: runADC();
+   291  07A5  120A  118A  2750  120A  118A  	fcall	_runADC
    292                           
-   293                           ;adc_main.c: 84: waitTimer();
-   294  07AA  120A  118A  2758  120A  118A  	fcall	_waitTimer
+   293                           ;adc_main.c: 85: waitTimer();
+   294  07AA  120A  118A  2757  120A  118A  	fcall	_waitTimer
    295                           
-   296                           ;adc_main.c: 85: sendADC();
+   296                           ;adc_main.c: 86: sendADC();
    297  07AF  120A  118A  27B5  120A  118A  	fcall	_sendADC
    298  07B4  2FA0               	goto	l570
    299  07B5                     __end_of_main:	
    300                           
    301                           	psect	text1
-   302  0758                     __ptext1:	
+   302  0757                     __ptext1:	
    303 ;; *************** function _waitTimer *****************
    304 ;; Defined at:
-   305 ;;		line 37 in file "adc_main.c"
+   305 ;;		line 38 in file "adc_main.c"
    306 ;; Parameters:    Size  Location     Type
    307 ;;		None
    308 ;; Auto vars:     Size  Location     Type
@@ -345,34 +345,34 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    331                           
    332                           
    333                           ;psect for function _waitTimer
-   334  0758                     _waitTimer:	
-   335  0758                     l46:	
-   336                           ;adc_main.c: 39: ;
+   334  0757                     _waitTimer:	
+   335  0757                     l46:	
+   336                           ;adc_main.c: 40: ;
    337                           
-   338                           ;adc_main.c: 38: while(INTCONbits.T0IF != 1)
+   338                           ;adc_main.c: 39: while(INTCONbits.T0IF != 1)
    339                           
    340                           ;incstack = 0
    341                           ; Regs used in _waitTimer: [wreg]
    342                           
-   343  0758  1D0B               	btfss	11,2	;volatile
-   344  0759  2F58               	goto	l46
+   343  0757  1D0B               	btfss	11,2	;volatile
+   344  0758  2F57               	goto	l46
    345                           
-   346                           ;adc_main.c: 40: TMR0 = 225;
-   347  075A  30E1               	movlw	225
-   348  075B  1283               	bcf	3,5	;RP0=0, select bank0
-   349  075C  1303               	bcf	3,6	;RP1=0, select bank0
-   350  075D  0081               	movwf	1	;volatile
+   346                           ;adc_main.c: 41: TMR0 = 194;
+   347  0759  30C2               	movlw	194
+   348  075A  1283               	bcf	3,5	;RP0=0, select bank0
+   349  075B  1303               	bcf	3,6	;RP1=0, select bank0
+   350  075C  0081               	movwf	1	;volatile
    351                           
-   352                           ;adc_main.c: 42: INTCONbits.T0IF = 0;
-   353  075E  110B               	bcf	11,2	;volatile
-   354  075F  0008               	return
-   355  0760                     __end_of_waitTimer:	
+   352                           ;adc_main.c: 43: INTCONbits.T0IF = 0;
+   353  075D  110B               	bcf	11,2	;volatile
+   354  075E  0008               	return
+   355  075F                     __end_of_waitTimer:	
    356                           
    357                           	psect	text2
    358  07B5                     __ptext2:	
    359 ;; *************** function _sendADC *****************
    360 ;; Defined at:
-   361 ;;		line 45 in file "adc_main.c"
+   361 ;;		line 46 in file "adc_main.c"
    362 ;; Parameters:    Size  Location     Type
    363 ;;		None
    364 ;; Auto vars:     Size  Location     Type
@@ -405,8 +405,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    391                           ;psect for function _sendADC
    392  07B5                     _sendADC:	
    393                           
-   394                           ;adc_main.c: 46: unsigned char parteB, parteA, aux;
-   395                           ;adc_main.c: 47: parteA = ADRESH;
+   394                           ;adc_main.c: 47: unsigned char parteB, parteA, aux;
+   395                           ;adc_main.c: 48: parteA = ADRESH;
    396                           
    397                           ;incstack = 0
    398                           ; Regs used in _sendADC: [wreg+status,2+status,0]
@@ -417,7 +417,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    403  07B9  0870               	movf	??_sendADC,w
    404  07BA  00F4               	movwf	sendADC@parteA
    405                           
-   406                           ;adc_main.c: 48: parteB = ADRESL;
+   406                           ;adc_main.c: 49: parteB = ADRESL;
    407  07BB  1683               	bsf	3,5	;RP0=1, select bank1
    408  07BC  1303               	bcf	3,6	;RP1=0, select bank1
    409  07BD  081E               	movf	30,w	;volatile
@@ -425,14 +425,14 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    411  07BF  0870               	movf	??_sendADC,w
    412  07C0  00F3               	movwf	sendADC@parteB
    413                           
-   414                           ;adc_main.c: 50: aux = parteA & 0x07;
+   414                           ;adc_main.c: 51: aux = parteA & 0x07;
    415  07C1  0874               	movf	sendADC@parteA,w
    416  07C2  3907               	andlw	7
    417  07C3  00F0               	movwf	??_sendADC
    418  07C4  0870               	movf	??_sendADC,w
    419  07C5  00F2               	movwf	sendADC@aux
    420                           
-   421                           ;adc_main.c: 51: aux = aux << 2;
+   421                           ;adc_main.c: 52: aux = aux << 2;
    422  07C6  0872               	movf	sendADC@aux,w
    423  07C7  00F0               	movwf	??_sendADC
    424  07C8  3001               	movlw	1
@@ -448,7 +448,7 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    434  07D1  0871               	movf	??_sendADC+1,w
    435  07D2  00F2               	movwf	sendADC@aux
    436                           
-   437                           ;adc_main.c: 53: parteA = parteA >> 3;
+   437                           ;adc_main.c: 54: parteA = parteA >> 3;
    438  07D3  0874               	movf	sendADC@parteA,w
    439  07D4  00F0               	movwf	??_sendADC
    440  07D5  3003               	movlw	3
@@ -463,14 +463,14 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    449  07DD  0871               	movf	??_sendADC+1,w
    450  07DE  00F4               	movwf	sendADC@parteA
    451                           
-   452                           ;adc_main.c: 54: parteA = parteA | 0x80;
+   452                           ;adc_main.c: 55: parteA = parteA | 0x80;
    453  07DF  0874               	movf	sendADC@parteA,w
    454  07E0  3880               	iorlw	128
    455  07E1  00F0               	movwf	??_sendADC
    456  07E2  0870               	movf	??_sendADC,w
    457  07E3  00F4               	movwf	sendADC@parteA
    458                           
-   459                           ;adc_main.c: 56: parteB = parteB >> 6;
+   459                           ;adc_main.c: 57: parteB = parteB >> 6;
    460  07E4  0873               	movf	sendADC@parteB,w
    461  07E5  00F0               	movwf	??_sendADC
    462  07E6  3006               	movlw	6
@@ -485,30 +485,30 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    471  07EE  0871               	movf	??_sendADC+1,w
    472  07EF  00F3               	movwf	sendADC@parteB
    473                           
-   474                           ;adc_main.c: 57: parteB = parteB | aux;
+   474                           ;adc_main.c: 58: parteB = parteB | aux;
    475  07F0  0873               	movf	sendADC@parteB,w
    476  07F1  0472               	iorwf	sendADC@aux,w
    477  07F2  00F0               	movwf	??_sendADC
    478  07F3  0870               	movf	??_sendADC,w
    479  07F4  00F3               	movwf	sendADC@parteB
    480                           
-   481                           ;adc_main.c: 59: TXREG = parteB;
+   481                           ;adc_main.c: 60: TXREG = parteB;
    482  07F5  0873               	movf	sendADC@parteB,w
    483  07F6  1283               	bcf	3,5	;RP0=0, select bank0
    484  07F7  1303               	bcf	3,6	;RP1=0, select bank0
    485  07F8  0099               	movwf	25	;volatile
    486                           
-   487                           ;adc_main.c: 60: TXREG = parteA;
+   487                           ;adc_main.c: 61: TXREG = parteA;
    488  07F9  0874               	movf	sendADC@parteA,w
    489  07FA  0099               	movwf	25	;volatile
    490  07FB  0008               	return
    491  07FC                     __end_of_sendADC:	
    492                           
    493                           	psect	text3
-   494  0751                     __ptext3:	
+   494  0750                     __ptext3:	
    495 ;; *************** function _runADC *****************
    496 ;; Defined at:
-   497 ;;		line 63 in file "adc_main.c"
+   497 ;;		line 64 in file "adc_main.c"
    498 ;; Parameters:    Size  Location     Type
    499 ;;		None
    500 ;; Auto vars:     Size  Location     Type
@@ -537,34 +537,34 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    523                           
    524                           
    525                           ;psect for function _runADC
-   526  0751                     _runADC:	
+   526  0750                     _runADC:	
    527                           
-   528                           ;adc_main.c: 64: unsigned char t;
-   529                           ;adc_main.c: 65: ADCON0bits.GO = 1;
+   528                           ;adc_main.c: 65: unsigned char t;
+   529                           ;adc_main.c: 66: ADCON0bits.GO = 1;
    530                           
    531                           ;incstack = 0
    532                           ; Regs used in _runADC: []
-   533  0751  1283               	bcf	3,5	;RP0=0, select bank0
-   534  0752  1303               	bcf	3,6	;RP1=0, select bank0
-   535  0753  149F               	bsf	31,1	;volatile
-   536  0754                     l55:	
-   537                           ;adc_main.c: 67: ;
+   533  0750  1283               	bcf	3,5	;RP0=0, select bank0
+   534  0751  1303               	bcf	3,6	;RP1=0, select bank0
+   535  0752  149F               	bsf	31,1	;volatile
+   536  0753                     l55:	
+   537                           ;adc_main.c: 68: ;
    538                           
-   539                           ;adc_main.c: 66: while(PIR1bits.ADIF != 1)
+   539                           ;adc_main.c: 67: while(PIR1bits.ADIF != 1)
    540                           
-   541  0754  1F0C               	btfss	12,6	;volatile
-   542  0755  2F54               	goto	l55
+   541  0753  1F0C               	btfss	12,6	;volatile
+   542  0754  2F53               	goto	l55
    543                           
-   544                           ;adc_main.c: 68: PIR1bits.ADIF = 0;
-   545  0756  130C               	bcf	12,6	;volatile
-   546  0757  0008               	return
-   547  0758                     __end_of_runADC:	
+   544                           ;adc_main.c: 69: PIR1bits.ADIF = 0;
+   545  0755  130C               	bcf	12,6	;volatile
+   546  0756  0008               	return
+   547  0757                     __end_of_runADC:	
    548                           
    549                           	psect	text4
-   550  076C                     __ptext4:	
+   550  075F                     __ptext4:	
    551 ;; *************** function _configUART *****************
    552 ;; Defined at:
-   553 ;;		line 29 in file "adc_main.c"
+   553 ;;		line 30 in file "adc_main.c"
    554 ;; Parameters:    Size  Location     Type
    555 ;;		None
    556 ;; Auto vars:     Size  Location     Type
@@ -593,36 +593,36 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    579                           
    580                           
    581                           ;psect for function _configUART
-   582  076C                     _configUART:	
+   582  075F                     _configUART:	
    583                           
-   584                           ;adc_main.c: 30: RCSTAbits.SPEN = 1;
+   584                           ;adc_main.c: 31: RCSTAbits.SPEN = 1;
    585                           
    586                           ;incstack = 0
    587                           ; Regs used in _configUART: []
-   588  076C  1283               	bcf	3,5	;RP0=0, select bank0
-   589  076D  1303               	bcf	3,6	;RP1=0, select bank0
-   590  076E  1798               	bsf	24,7	;volatile
+   588  075F  1283               	bcf	3,5	;RP0=0, select bank0
+   589  0760  1303               	bcf	3,6	;RP1=0, select bank0
+   590  0761  1798               	bsf	24,7	;volatile
    591                           
-   592                           ;adc_main.c: 31: RCSTAbits.CREN = 1;
-   593  076F  1618               	bsf	24,4	;volatile
+   592                           ;adc_main.c: 32: RCSTAbits.CREN = 1;
+   593  0762  1618               	bsf	24,4	;volatile
    594                           
-   595                           ;adc_main.c: 32: TXSTAbits.BRGH = 1;
-   596  0770  1683               	bsf	3,5	;RP0=1, select bank1
-   597  0771  1303               	bcf	3,6	;RP1=0, select bank1
-   598  0772  1518               	bsf	24,2	;volatile
+   595                           ;adc_main.c: 33: TXSTAbits.BRGH = 1;
+   596  0763  1683               	bsf	3,5	;RP0=1, select bank1
+   597  0764  1303               	bcf	3,6	;RP1=0, select bank1
+   598  0765  1518               	bsf	24,2	;volatile
    599                           
-   600                           ;adc_main.c: 33: TXSTAbits.TXEN = 1;
-   601  0773  1698               	bsf	24,5	;volatile
+   600                           ;adc_main.c: 34: TXSTAbits.TXEN = 1;
+   601  0766  1698               	bsf	24,5	;volatile
    602                           
-   603                           ;adc_main.c: 34: PIR1bits.ADIF=0;
-   604  0774  1283               	bcf	3,5	;RP0=0, select bank0
-   605  0775  1303               	bcf	3,6	;RP1=0, select bank0
-   606  0776  130C               	bcf	12,6	;volatile
-   607  0777  0008               	return
-   608  0778                     __end_of_configUART:	
+   603                           ;adc_main.c: 35: PIR1bits.ADIF=0;
+   604  0767  1283               	bcf	3,5	;RP0=0, select bank0
+   605  0768  1303               	bcf	3,6	;RP1=0, select bank0
+   606  0769  130C               	bcf	12,6	;volatile
+   607  076A  0008               	return
+   608  076B                     __end_of_configUART:	
    609                           
    610                           	psect	text5
-   611  0760                     __ptext5:	
+   611  076B                     __ptext5:	
    612 ;; *************** function _configTimer *****************
    613 ;; Defined at:
    614 ;;		line 8 in file "adc_main.c"
@@ -654,106 +654,109 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    640                           
    641                           
    642                           ;psect for function _configTimer
-   643  0760                     _configTimer:	
+   643  076B                     _configTimer:	
    644                           
    645                           ;adc_main.c: 9: OSCCONbits.IRCF2 = 0;
    646                           
    647                           ;incstack = 0
    648                           ; Regs used in _configTimer: [wreg]
-   649  0760  1683               	bsf	3,5	;RP0=1, select bank1
-   650  0761  1303               	bcf	3,6	;RP1=0, select bank1
-   651  0762  130F               	bcf	15,6	;volatile
+   649  076B  1683               	bsf	3,5	;RP0=1, select bank1
+   650  076C  1303               	bcf	3,6	;RP1=0, select bank1
+   651  076D  130F               	bcf	15,6	;volatile
    652                           
    653                           ;adc_main.c: 10: OSCCONbits.IRCF1 = 0;
-   654  0763  128F               	bcf	15,5	;volatile
+   654  076E  128F               	bcf	15,5	;volatile
    655                           
-   656                           ;adc_main.c: 12: OPTION_REGbits.PSA = 0;
-   657  0764  1181               	bcf	1,3	;volatile
+   656                           ;adc_main.c: 11: OSCCONbits.IRCF0 = 1;
+   657  076F  160F               	bsf	15,4	;volatile
    658                           
-   659                           ;adc_main.c: 13: OPTION_REGbits.T0CS = 0;
-   660  0765  1281               	bcf	1,5	;volatile
+   659                           ;adc_main.c: 13: OPTION_REGbits.PSA = 0;
+   660  0770  1181               	bcf	1,3	;volatile
    661                           
-   662                           ;adc_main.c: 14: INTCONbits.T0IF = 0;
-   663  0766  110B               	bcf	11,2	;volatile
+   662                           ;adc_main.c: 14: OPTION_REGbits.T0CS = 0;
+   663  0771  1281               	bcf	1,5	;volatile
    664                           
-   665                           ;adc_main.c: 15: TMR0 = 225;
-   666  0767  30E1               	movlw	225
-   667  0768  1283               	bcf	3,5	;RP0=0, select bank0
-   668  0769  1303               	bcf	3,6	;RP1=0, select bank0
-   669  076A  0081               	movwf	1	;volatile
-   670  076B  0008               	return
-   671  076C                     __end_of_configTimer:	
-   672                           
-   673                           	psect	text6
-   674  0778                     __ptext6:	
-   675 ;; *************** function _configADC *****************
-   676 ;; Defined at:
-   677 ;;		line 19 in file "adc_main.c"
-   678 ;; Parameters:    Size  Location     Type
-   679 ;;		None
-   680 ;; Auto vars:     Size  Location     Type
-   681 ;;		None
-   682 ;; Return value:  Size  Location     Type
-   683 ;;                  1    wreg      void 
-   684 ;; Registers used:
-   685 ;;		status,2
-   686 ;; Tracked objects:
-   687 ;;		On entry : 0/0
-   688 ;;		On exit  : 0/0
-   689 ;;		Unchanged: 0/0
-   690 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   691 ;;      Params:         0       0       0       0       0
-   692 ;;      Locals:         0       0       0       0       0
-   693 ;;      Temps:          0       0       0       0       0
-   694 ;;      Totals:         0       0       0       0       0
-   695 ;;Total ram usage:        0 bytes
-   696 ;; Hardware stack levels used:    1
-   697 ;; This function calls:
-   698 ;;		Nothing
-   699 ;; This function is called by:
-   700 ;;		_main
-   701 ;; This function uses a non-reentrant model
-   702 ;;
-   703                           
-   704                           
-   705                           ;psect for function _configADC
-   706  0778                     _configADC:	
+   665                           ;adc_main.c: 15: INTCONbits.T0IF = 0;
+   666  0772  110B               	bcf	11,2	;volatile
+   667                           
+   668                           ;adc_main.c: 16: TMR0 = 194;
+   669  0773  30C2               	movlw	194
+   670  0774  1283               	bcf	3,5	;RP0=0, select bank0
+   671  0775  1303               	bcf	3,6	;RP1=0, select bank0
+   672  0776  0081               	movwf	1	;volatile
+   673  0777  0008               	return
+   674  0778                     __end_of_configTimer:	
+   675                           
+   676                           	psect	text6
+   677  0778                     __ptext6:	
+   678 ;; *************** function _configADC *****************
+   679 ;; Defined at:
+   680 ;;		line 20 in file "adc_main.c"
+   681 ;; Parameters:    Size  Location     Type
+   682 ;;		None
+   683 ;; Auto vars:     Size  Location     Type
+   684 ;;		None
+   685 ;; Return value:  Size  Location     Type
+   686 ;;                  1    wreg      void 
+   687 ;; Registers used:
+   688 ;;		status,2
+   689 ;; Tracked objects:
+   690 ;;		On entry : 0/0
+   691 ;;		On exit  : 0/0
+   692 ;;		Unchanged: 0/0
+   693 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   694 ;;      Params:         0       0       0       0       0
+   695 ;;      Locals:         0       0       0       0       0
+   696 ;;      Temps:          0       0       0       0       0
+   697 ;;      Totals:         0       0       0       0       0
+   698 ;;Total ram usage:        0 bytes
+   699 ;; Hardware stack levels used:    1
+   700 ;; This function calls:
+   701 ;;		Nothing
+   702 ;; This function is called by:
+   703 ;;		_main
+   704 ;; This function uses a non-reentrant model
+   705 ;;
+   706                           
    707                           
-   708                           ;adc_main.c: 20: ADCON0bits.ADON = 1;
-   709                           
-   710                           ;incstack = 0
-   711                           ; Regs used in _configADC: [status,2]
-   712  0778  1283               	bcf	3,5	;RP0=0, select bank0
-   713  0779  1303               	bcf	3,6	;RP1=0, select bank0
-   714  077A  141F               	bsf	31,0	;volatile
-   715                           
-   716                           ;adc_main.c: 21: ADCON0bits.CHS3 = 1;
-   717  077B  169F               	bsf	31,5	;volatile
+   708                           ;psect for function _configADC
+   709  0778                     _configADC:	
+   710                           
+   711                           ;adc_main.c: 21: ADCON0bits.ADON = 1;
+   712                           
+   713                           ;incstack = 0
+   714                           ; Regs used in _configADC: [status,2]
+   715  0778  1283               	bcf	3,5	;RP0=0, select bank0
+   716  0779  1303               	bcf	3,6	;RP1=0, select bank0
+   717  077A  141F               	bsf	31,0	;volatile
    718                           
-   719                           ;adc_main.c: 22: ADCON0bits.ADCS1 = 0;
-   720  077C  139F               	bcf	31,7	;volatile
+   719                           ;adc_main.c: 22: ADCON0bits.CHS3 = 1;
+   720  077B  169F               	bsf	31,5	;volatile
    721                           
-   722                           ;adc_main.c: 23: ADCON1bits.ADFM = 0;
-   723  077D  1683               	bsf	3,5	;RP0=1, select bank1
-   724  077E  1303               	bcf	3,6	;RP1=0, select bank1
-   725  077F  139F               	bcf	31,7	;volatile
-   726                           
-   727                           ;adc_main.c: 24: ANSEL= 0;
-   728  0780  1683               	bsf	3,5	;RP0=1, select bank3
-   729  0781  1703               	bsf	3,6	;RP1=1, select bank3
-   730  0782  0188               	clrf	8	;volatile
-   731                           
-   732                           ;adc_main.c: 25: ANSELH = 0;
-   733  0783  0189               	clrf	9	;volatile
+   722                           ;adc_main.c: 23: ADCON0bits.ADCS1 = 0;
+   723  077C  139F               	bcf	31,7	;volatile
+   724                           
+   725                           ;adc_main.c: 24: ADCON1bits.ADFM = 0;
+   726  077D  1683               	bsf	3,5	;RP0=1, select bank1
+   727  077E  1303               	bcf	3,6	;RP1=0, select bank1
+   728  077F  139F               	bcf	31,7	;volatile
+   729                           
+   730                           ;adc_main.c: 25: ANSEL= 0;
+   731  0780  1683               	bsf	3,5	;RP0=1, select bank3
+   732  0781  1703               	bsf	3,6	;RP1=1, select bank3
+   733  0782  0188               	clrf	8	;volatile
    734                           
-   735                           ;adc_main.c: 26: ADRESL = 0;
-   736  0784  1683               	bsf	3,5	;RP0=1, select bank1
-   737  0785  1303               	bcf	3,6	;RP1=0, select bank1
-   738  0786  019E               	clrf	30	;volatile
-   739  0787  0008               	return
-   740  0788                     __end_of_configADC:	
-   741  007E                     btemp	set	126	;btemp
-   742  007E                     wtemp0	set	126
+   735                           ;adc_main.c: 26: ANSELH = 0;
+   736  0783  0189               	clrf	9	;volatile
+   737                           
+   738                           ;adc_main.c: 27: ADRESL = 0;
+   739  0784  1683               	bsf	3,5	;RP0=1, select bank1
+   740  0785  1303               	bcf	3,6	;RP1=0, select bank1
+   741  0786  019E               	clrf	30	;volatile
+   742  0787  0008               	return
+   743  0788                     __end_of_configADC:	
+   744  007E                     btemp	set	126	;btemp
+   745  007E                     wtemp0	set	126
 
 
 Data Sizes:
@@ -864,9 +867,9 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                   Sat Jun  9 19:57:57 2018
+Symbol Table                                                                                   Sat Jun  9 21:44:19 2018
 
-                      l46 0758                        l55 0754                        u25 07C9  
+                      l46 0757                        l55 0753                        u25 07C9  
                       u35 07D6                        u45 07E7                       l570 07A0  
                     _TMR0 0001                      _main 0788                      btemp 007E  
                     start 0000             __CFG_IESO$OFF 0000                     ?_main 0070  
@@ -875,21 +878,21 @@ Symbol Table                                                                    
           __CFG_FCMEN$OFF 0000           __end_of_sendADC 07FC                     status 0003  
                    wtemp0 007E           __initialization 07FC              __end_of_main 07B5  
                   ??_main 0075                    _ADRESH 001E                    _ADRESL 009E  
-                  _ANSELH 0189      __size_of_configTimer 000C                    _runADC 0751  
+                  _ANSELH 0189      __size_of_configTimer 000D                    _runADC 0750  
                ??_sendADC 0070   __end_of__initialization 07FC            __pcstackCOMMON 0070  
           _OPTION_REGbits 0081        __size_of_configADC 0010                __pmaintext 0788  
-                 ?_runADC 0070        __size_of_waitTimer 0008                _configUART 076C  
-       __end_of_configADC 0788           __size_of_runADC 0007                   __ptext1 0758  
-                 __ptext2 07B5                   __ptext3 0751                   __ptext4 076C  
-                 __ptext5 0760                   __ptext6 0778                   _sendADC 07B5  
-    end_of_initialization 07FC         __end_of_waitTimer 0760                 _RCSTAbits 0018  
+                 ?_runADC 0070        __size_of_waitTimer 0008                _configUART 075F  
+       __end_of_configADC 0788           __size_of_runADC 0007                   __ptext1 0757  
+                 __ptext2 07B5                   __ptext3 0750                   __ptext4 075F  
+                 __ptext5 076B                   __ptext6 0778                   _sendADC 07B5  
+    end_of_initialization 07FC         __end_of_waitTimer 075F                 _RCSTAbits 0018  
              ?_configUART 0070                 _TXSTAbits 0098             ??_configTimer 0070  
-          __end_of_runADC 0758       start_initialization 07FC  __CFG_FOSC$INTRC_NOCLKOUT 0000  
-     __size_of_configUART 000C       __end_of_configTimer 076C                  ??_runADC 0070  
+          __end_of_runADC 0757       start_initialization 07FC  __CFG_FOSC$INTRC_NOCLKOUT 0000  
+     __size_of_configUART 000C       __end_of_configTimer 0778                  ??_runADC 0070  
               sendADC@aux 0072                 ___latbits 0002                 _configADC 0778  
-                ?_sendADC 0070               _configTimer 0760                  _PIR1bits 000C  
-               _waitTimer 0758                ?_configADC 0070                _ADCON0bits 001F  
-              _ADCON1bits 009F              ??_configUART 0070        __end_of_configUART 0778  
+                ?_sendADC 0070               _configTimer 076B                  _PIR1bits 000C  
+               _waitTimer 0757                ?_configADC 0070                _ADCON0bits 001F  
+              _ADCON1bits 009F              ??_configUART 0070        __end_of_configUART 076B  
               ?_waitTimer 0070          __size_of_sendADC 0047             __size_of_main 002D  
              ??_configADC 0070                _INTCONbits 000B                _OSCCONbits 008F  
              ??_waitTimer 0070             sendADC@parteA 0074             sendADC@parteB 0073  

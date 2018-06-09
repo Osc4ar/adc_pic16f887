@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.45/dat/en_msgs.txt -cs \
   -h+dist/default/production/adc.X.production.sym \
   --cmf=dist/default/production/adc.X.production.cmf -z -Q16F887 \
-  -o/tmp/xcXFLcZNW -Mdist/default/production/adc.X.production.map -E1 \
+  -o/tmp/xcX3we7W6 -Mdist/default/production/adc.X.production.map -E1 \
   -ver=XC8 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -17,7 +17,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k /tmp/xcXnqHZxe.obj \
+  -DENTRY=2 -k /tmp/xcX35UE1b.obj \
   dist/default/production/adc.X.production.obj 
 
 Object code version is 3.11
@@ -27,17 +27,17 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXnqHZxe.obj
+/tmp/xcX35UE1b.obj
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1     400E       0
 dist/default/production/adc.X.production.obj
                 cinit                               7FC      7FC        4      FF8       0
                 text6                               778      778       10      EF0       0
-                text5                               760      760        C      EC0       0
-                text4                               76C      76C        C      ED8       0
-                text3                               751      751        7      EA2       0
+                text5                               76B      76B        D      ED6       0
+                text4                               75F      75F        C      EBE       0
+                text3                               750      750        7      EA0       0
                 text2                               7B5      7B5       47      F6A       0
-                text1                               758      758        8      EB0       0
+                text1                               757      757        8      EAE       0
                 maintext                            788      788       2D      F10       0
                 cstackCOMMON                         70       70        5       70       1
 
@@ -48,11 +48,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                              0        0        3         0
                 cinit                               7FC      7FC        4         0
                 text6                               778      778       10         0
-                text5                               760      760        C         0
-                text4                               76C      76C        C         0
-                text3                               751      751        7         0
+                text5                               76B      76B        D         0
+                text4                               75F      75F        C         0
+                text3                               750      750        7         0
                 text2                               7B5      7B5       47         0
-                text1                               758      758        8         0
+                text1                               757      757        8         0
                 maintext                            788      788       2D         0
 
         CLASS   STRCODE        
@@ -100,10 +100,10 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 cstackCOMMON                   000070  000005  000075        70       1  COMMON      1
-                text3                          000751  000007  000758       EA2       0  CODE        2
-                text1                          000758  000008  000760       EB0       0  CODE        2
-                text5                          000760  00000C  00076C       EC0       0  CODE        2
-                text4                          00076C  00000C  000778       ED8       0  CODE        2
+                text3                          000750  000007  000757       EA0       0  CODE        2
+                text1                          000757  000008  00075F       EAE       0  CODE        2
+                text4                          00075F  00000C  00076B       EBE       0  CODE        2
+                text5                          00076B  00000D  000778       ED6       0  CODE        2
                 text6                          000778  000010  000788       EF0       0  CODE        2
                 maintext                       000788  00002D  0007B5       F10       0  CODE        2
                 text2                          0007B5  000047  0007FC       F6A       0  CODE        2
@@ -118,14 +118,14 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0003-0750            74E           2
+        CODE             0003-074F            74D           2
                          0800-1FFF            800
         COMMON           0075-007D              9           1
         CONFIG           2008-2008              1           2
-        CONST            0003-0750            100           2
+        CONST            0003-074F            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0003-0750            100           2
+        ENTRY            0003-074F            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
@@ -137,9 +137,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0003-0750            74E           2
+        STRCODE          0003-074F            74D           2
                          0800-1FFF           1800
-        STRING           0003-0750            100           2
+        STRING           0003-074F            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -238,20 +238,20 @@ ___latbits                (abs)        0002
 ___sp                     stack        0000
 __end_of__initialization  cinit        07FC
 __end_of_configADC        text6        0788
-__end_of_configTimer      text5        076C
-__end_of_configUART       text4        0778
+__end_of_configTimer      text5        0778
+__end_of_configUART       text4        076B
 __end_of_main             maintext     07B5
-__end_of_runADC           text3        0758
+__end_of_runADC           text3        0757
 __end_of_sendADC          text2        07FC
-__end_of_waitTimer        text1        0760
+__end_of_waitTimer        text1        075F
 __initialization          cinit        07FC
 __pcstackCOMMON           cstackCOMMON 0070
 __pmaintext               maintext     0788
-__ptext1                  text1        0758
+__ptext1                  text1        0757
 __ptext2                  text2        07B5
-__ptext3                  text3        0751
-__ptext4                  text4        076C
-__ptext5                  text5        0760
+__ptext3                  text3        0750
+__ptext4                  text4        075F
+__ptext5                  text5        076B
 __ptext6                  text6        0778
 __size_of_configADC       (abs)        0000
 __size_of_configTimer     (abs)        0000
@@ -261,12 +261,12 @@ __size_of_runADC          (abs)        0000
 __size_of_sendADC         (abs)        0000
 __size_of_waitTimer       (abs)        0000
 _configADC                text6        0778
-_configTimer              text5        0760
-_configUART               text4        076C
+_configTimer              text5        076B
+_configUART               text4        075F
 _main                     maintext     0788
-_runADC                   text3        0751
+_runADC                   text3        0750
 _sendADC                  text2        07B5
-_waitTimer                text1        0758
+_waitTimer                text1        0757
 btemp                     (abs)        007E
 end_of_initialization     cinit        07FC
 intlevel0                 functab      0000
@@ -290,7 +290,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 71 in file "adc_main.c"
+		line 72 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -324,7 +324,7 @@ Total ram usage:        0 bytes
 
  *************** function _waitTimer *****************
  Defined at:
-		line 37 in file "adc_main.c"
+		line 38 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -353,7 +353,7 @@ Total ram usage:        0 bytes
 
  *************** function _sendADC *****************
  Defined at:
-		line 45 in file "adc_main.c"
+		line 46 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -384,7 +384,7 @@ Total ram usage:        5 bytes
 
  *************** function _runADC *****************
  Defined at:
-		line 63 in file "adc_main.c"
+		line 64 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -413,7 +413,7 @@ Total ram usage:        0 bytes
 
  *************** function _configUART *****************
  Defined at:
-		line 29 in file "adc_main.c"
+		line 30 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -471,7 +471,7 @@ Total ram usage:        0 bytes
 
  *************** function _configADC *****************
  Defined at:
-		line 19 in file "adc_main.c"
+		line 20 in file "adc_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -510,11 +510,11 @@ shared estimated size: 1
 adc_main.c
 		_configADC     		CODE           	0778	0000	17
 		_main          		CODE           	0788	0000	46
-		_configTimer   		CODE           	0760	0000	13
+		_configTimer   		CODE           	076B	0000	14
 		_sendADC       		CODE           	07B5	0000	72
-		_waitTimer     		CODE           	0758	0000	9
-		_runADC        		CODE           	0751	0000	8
-		_configUART    		CODE           	076C	0000	13
+		_waitTimer     		CODE           	0757	0000	9
+		_runADC        		CODE           	0750	0000	8
+		_configUART    		CODE           	075F	0000	13
 
-adc_main.c estimated size: 178
+adc_main.c estimated size: 179
 

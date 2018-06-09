@@ -2124,11 +2124,12 @@ extern __bank0 __bit __timeout;
 void configTimer(void) {
 OSCCONbits.IRCF2 = 0;
 OSCCONbits.IRCF1 = 0;
+OSCCONbits.IRCF0 = 1;
 
 OPTION_REGbits.PSA = 0;
 OPTION_REGbits.T0CS = 0;
 INTCONbits.T0IF = 0;
-TMR0 = 225;
+TMR0 = 194;
 
 }
 
@@ -2153,7 +2154,7 @@ PIR1bits.ADIF=0;
 void waitTimer(void) {
 while(INTCONbits.T0IF != 1)
 ;
-TMR0 = 225;
+TMR0 = 194;
 
 INTCONbits.T0IF = 0;
 }
