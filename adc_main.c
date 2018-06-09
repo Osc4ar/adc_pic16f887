@@ -6,12 +6,14 @@
 #pragma config FCMEN=OFF
 
 void configTimer(void) {
-    OSCCONbits.IRCF2 = 0; //De 4MHz a 250kHz
-    OPTION_REGbits.PS1 = 0; //Factor de escala de 256 a 64
+    OSCCONbits.IRCF2 = 0; //De 4MHz a 31kHz IRCF = 000
+    OSCCONbits.IRCF1 = 0; //De 4MHz a 31kHz
+    //Factor de escala de 256; 31kHz/4=7750Hz 7750Hz/256 = 30.2734375Hz
     OPTION_REGbits.PSA = 0; //Usar preescalador
     OPTION_REGbits.T0CS = 0; //Activar el contar pulsos de oscilador principal
-    INTCONbits.T0IF = 0;
-    TMR0 = 0;
+    INTCONbits.T0IF = 0; 
+    TMR0 = 225; //Cada 1 segundo; Para unicamente contar 30 veces,  30.2734375Hz/30 = 1.00911Hz
+//    TMR0 = 0; //Cada 10 segundos aprox. 30.2734375Hz/256 = 0.118255615Hz
 }
 
 void configADC(void) {
@@ -35,15 +37,9 @@ void configUART(void) {
 void waitTimer(void) {
     while(INTCONbits.T0IF != 1)
         ;
-    TMR0 = 0;
+    TMR0 = 225; //Cada 1 segundo; Para unicamente contar 30 veces,  30.2734375Hz/30 = 1.00911Hz
+//    TMR0 = 0; //Cada 10 segundos aprox. 30.2734375Hz/256 = 0.118255615Hz
     INTCONbits.T0IF = 0;
-}
-
-void runADC(void) {
-    ADCON0bits.GO = 1;
-    while(PIR1bits.ADIF != 1)
-        ;
-    PIR1bits.ADIF = 0;
 }
 
 void sendADC(void) {
@@ -64,6 +60,14 @@ void sendADC(void) {
     TXREG = parteA;
 }
 
+void runADC(void) {
+    unsigned char t;
+    ADCON0bits.GO = 1;
+    while(PIR1bits.ADIF != 1)
+        ;
+    PIR1bits.ADIF = 0;
+}
+
 void main(void) {    
     TRISD=0X00;
     TRISB=0XFF;
@@ -77,7 +81,6 @@ void main(void) {
     while(1) {
         waitTimer();
         runADC();
-        waitTimer();
         sendADC();
     }
 }

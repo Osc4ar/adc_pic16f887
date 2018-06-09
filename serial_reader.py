@@ -42,7 +42,7 @@ def main():
                 plt.title(t)
                 ln.set_color(getColor(converted))
                 ln.set_ydata(y)
-                plt.pause(0.005)
+                plt.pause(0.01)
 
 if __name__ == '__main__':
     main()
