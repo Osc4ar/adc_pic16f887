@@ -1,10 +1,11 @@
-import serial, binascii
+import serial, binascii, time
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 #Suponiendo un rango de 0 a 50
 def toCelsius(value):
-    return float((value*50)/5)
+    return float((value*50)/5) - 0.3
+    #return float((value*100)/7.8)
 
 def getColor(value):
     if value < 10:
@@ -26,6 +27,8 @@ def main():
     ax.set_ylim([0, 51])
     plt.ion()
     plt.show()
+    
+    start = time.time()
 
     while True:
         data = ser.read()
@@ -34,11 +37,15 @@ def main():
             if binary[0] == "0":
                 parteB = binary
             else:
-                full_bin = int(''.join(binary[3:] + parteB[3:]), 2)
+                full_bin = ''.join(binary[3:] + parteB[3:])
+                print(full_bin)
+                full_bin = int(full_bin, 2)
                 converted = toCelsius(float((full_bin*5)/1023))
                 y.pop(0)
                 y.append(converted)
-                t = "Temperatura: " + str("{0:.2f}".format(converted)) + "°C"
+                t = "Temperatura: " + str("{0:.2f}".format(converted)) + "°C\nCaptura anterior hace " + str("{0:.2f}".format(time.time() - start))
+                t = t + " segundos"
+                start = time.time()
                 plt.title(t)
                 ln.set_color(getColor(converted))
                 ln.set_ydata(y)
