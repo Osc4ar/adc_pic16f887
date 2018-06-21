@@ -18,7 +18,7 @@ int main()
 	int fd_serie, j;
 	unsigned char dato, parteB;
 	unsigned short int tempL, tempH, temp, medicion;
-	float converted = 0.0;
+	float converted = 0.0, temperatura = 0.0;
 
 	fd_serie = config_serial( "/dev/ttyUSB0", B9600 );
 	for(; EVER; )
@@ -29,7 +29,8 @@ int main()
       		dato = dato & 0x1F;
       		medicion = (((short)dato) << 5) | parteB;
       		converted = (float)(5 * medicion) / 1023;
-      		printf("%.4f\n", converted);
+      		temperatura = (float)(converted*10);
+      		printf("%.2f\n", temperatura);
 		}
 		else
 		  parteB = dato;
@@ -120,4 +121,3 @@ int config_serial( char *dispositivo_serial, speed_t baudios )
 //Retorna el descriptor de archivo
 	return fd;
 }
-
